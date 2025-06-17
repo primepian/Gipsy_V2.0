@@ -100,9 +100,12 @@ public class Full extends LinearOpMode {
             }//T: [BRAZO] Grarra cerrar
             else if (gamepad2.right_trigger > 0.0 && !RTrigger) {
                 brazo.setPosition(1.0);
+                brazoTwist.setPosition(0.0);
             }
             else if (gamepad2.left_trigger > 0.0 && !LTrigger) {
                 brazo.setPosition(0.0);
+                brazoTwist.setPosition(0.68);
+                garra.setPosition(0.5);
             }
 
             RTrigger = gamepad1.right_trigger > 0.0;
